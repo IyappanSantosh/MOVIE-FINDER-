@@ -12,7 +12,7 @@ http: document.addEventListener("DOMContentLoaded", () => {
         
         try{
             movieResults.innerHTML = '<div class="loading">Searching movies...</div>';
-            const response =await fetch(`http://www.omdbapi.com?apikey=14e82aca&s=${movieName}`);
+            const response =await fetch(`https://www.omdbapi.com?apikey=14e82aca&s=${movieName}`);
             const data = await response.json();
             if((data.response === 'False')) {
                 throw new Error("query not found");
